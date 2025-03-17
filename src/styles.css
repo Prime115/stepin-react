@@ -1,0 +1,2779 @@
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+button {
+    cursor: pointer;
+}
+header{
+    position: fixed;
+    height: 5.46vw;
+    width:100%;
+    background: transparent;
+    z-index: 1000;
+    top:0;
+
+}
+#draggable{
+    position: absolute;
+    cursor: grab;
+    height: 6.25vw;
+    width: 8.75vw;
+    background-image: url("images/dumbell.png");
+    background-size: cover;
+    background-position: center;
+
+    z-index:10;
+}
+#dropzone{
+    position: absolute;
+    width: 20vw;
+    height: 12vw;
+    background-color: rgba(0,0,0, 0);
+    margin-top:-8vw;
+    margin-left: -3vw;
+
+}
+#droppable{
+    height: 13.14vw;
+    width: 15vw;
+    position: relative;
+    left: 45%;
+    top: 3%;
+    display: flex;
+    z-index: 5;
+}
+.navboard {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+header.visa {
+    background-color: #171717;
+    filter: drop-shadow(0 0 0.41vw #000000);
+}
+header.visa #logo {
+    filter:none;
+}
+header.visa .orangeButton{
+    background-color: #ed8606;
+}
+* {
+    color: white;
+
+
+}
+.lock{
+    display:none;
+}
+.hamburger {
+    cursor:none;
+    display: none;
+
+}
+
+h2 {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 2.85vw;
+}
+
+.navboard:hover  {
+    background-color: rgba(30, 30, 30, 0.8);
+    filter: drop-shadow(0 0 0.41vw #000000);
+}
+.navboard button {
+    transition: all 0.3s;
+}
+.navboard #logo{
+    transition: all 0.3s;
+}
+.navboard:hover .orangeButton {
+    background-color: #ED8606;
+}
+
+.navboard:hover #logo {
+    filter:none;
+}
+#Navlist-mobile.Navlist {
+    display: none;
+}
+.Navlist a:hover {
+    color: #ED8606;
+}
+
+#logo {
+    padding-left: 1.17vw;
+    padding-top: 0.39vw;
+    filter: grayscale(1);
+}
+#logo img {
+    height:4.68vw;
+}
+.logga-in {
+    background:none;
+    border:none;
+    transition: all 0.3s;
+}
+.logga-in:hover{
+    transform: none;
+    border:none;
+    color: #ED8606;
+}
+#logga-inRuta {
+    display: none;
+    transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translate(0,-10%);
+    z-index: 500;
+}
+#logga-inRuta.show {
+    display: block;
+    opacity: 1;
+    transform: translate(0,28%);
+}
+
+
+.logga-inRuta {
+    background: #1E1E1E;
+    height: 18vw;
+    position:fixed;
+    width: 19vw;
+    left: 77vw;
+    top: 0;
+    z-index: 100;
+    border-radius: 1vw;
+
+}
+.logga-inRuta form{
+    display: grid;
+    align-items: center;
+    height: 100%;
+    grid-template-areas: "a""b""c";
+    grid-template-rows: 0.8fr 1fr 0.6fr;
+}
+.logga-inRuta input{
+    border-radius: 0.7vw;
+    border:none;
+    justify-self: center;
+    width: 14vw;
+    height: 2vw;
+    background-color: #E5E5E5;
+    font-size: 0.8vw;
+    font-family: Roboto, sans-serif;
+}
+
+.logga-inRuta #logga-inEpost {
+    grid-area: a;
+    align-self: end;
+
+}
+.logga-inRuta #logga-inPass{
+    grid-area: b;
+    align-self: start;
+    margin:0.4vw;
+}
+.logga-inRuta #logga-inSubmit {
+    grid-area: c;
+    width: 12vw;
+    background-color: #ED8606;
+    font-size: 0.9vw;
+    text-transform: uppercase;
+
+}
+
+.Navlist a, .logga-in {
+    Font-family: Montserrat, arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    text-decoration: none;
+    font-size: 1.09vw;
+    transition: all 0.3s;
+
+}
+.Navlist ul{
+    margin-top:1.25vw;
+    margin-bottom: 1.25vw;
+}
+.Navlist li {
+    display: inline-block;
+    padding:0 1.4vw;
+
+}
+
+#hero video {
+    position: absolute;
+
+    height: 45.73vw;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+
+}
+main#anderstorp #hero{
+    background-image: url('images/anderstorp.jpg');
+    background-size: cover;
+    background-position: center;
+}
+main#trainPage #hero{
+    background-image: url('images/Train.jpg');
+    background-size: cover;
+    background-position-y: 40%;
+}
+main#our-gym #hero{
+    background-image: url('images/ourGyms2.jpg');
+    background-size: cover;
+    background-position-y: 60%;
+}
+.heroimage {
+
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+}
+.dimoverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+
+.shadow {
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
+
+}
+
+
+.herotext{
+    z-index: 500;
+    position: relative;
+    margin-top: 0;
+    top:10vw;
+
+}
+
+.HeaderText {
+    font-family: "Roboto Condensed",sans-serif;
+    font-weight: 800;
+    font-size: 4.16vw;
+    margin-left: 9.897vw;
+    text-transform: uppercase;
+    margin-top:0;
+
+}
+.orangeButton {
+    background-color: #ED8606;
+    width: 13.3vw;
+    height:2.97vw;
+    position: relative;
+    border-radius: 2.3vw;
+    border-color: #ed8606;
+    border-style: solid;
+    border-width: thin;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 1.09vw;
+    transition:all 0.3s ease-in-out, color 0.3s ease-in-out;
+
+}
+
+button:hover {
+    transform: scale(1.05);
+    border: 0.01vw solid #ffffff;
+}
+.herotext button{
+    margin-left: 9.88vw;
+}
+
+.Navlist .orangeButton {
+    background: transparent;
+    border-radius:2.34vw;
+    border-color: #D67505;
+    border-style: solid;
+    border-width: thin;
+    height:2.94vw;
+    width: 10.6vw;
+    font-family: Montserrat, arial, sans-serif;
+    font-weight: 600;
+
+}
+
+.slogan {
+    display: flex;
+    justify-content: center;
+}
+
+#hero {
+    height:22.85vw;
+    position: relative;
+    width: 100%;
+
+}
+main#home #hero {
+    height:45.73vw;
+}
+main#home .herotext {
+    top:20vw;
+}
+
+#sida2{
+    width: 100%;
+    height: 52vw;
+    align-items: center;
+
+}
+.BlueHeaders {
+    color: #293844;
+    text-transform: uppercase;
+    margin-bottom:0;
+    text-align: center;
+    width: 40%;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-areas:
+    ". . ."
+    "a b c"
+    ". . .";
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    height: 45.7vw;
+
+    justify-content: center;
+    gap: 2.9vw;
+    padding:0;
+
+}
+.card{
+    transition: all 0.3s ease-in-out;
+    border-radius: 1.56vw;
+}
+.card img{
+    height:100%;
+    width:27.26vw;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+
+}
+#card1 {
+    grid-area: a;
+    height: 38.36vw;
+
+}
+
+#card2 {
+    grid-area: b;
+    height: 38.36vw;
+
+}
+
+#card3 {
+    grid-area: c;
+    height: 38.36vw;
+}
+
+
+
+.cards li{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+.cardText {
+    top:0.39vw;
+    position: absolute;
+
+    padding-left: 1.56vw;
+    justify-content: space-between;
+
+}
+.cards a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    height:37.73vw;
+    width:27.26vw;
+
+}
+.cards h3 {
+    font-size: 2.48vw;
+    font-weight: 600;
+}
+
+.cards p {
+    font-family: Roboto, sans-serif ;
+    font-weight: 700;
+    font-size: 1.227vw;
+
+    padding-top: 24.8vw;
+    text-align:left;
+
+}
+
+
+.cards img {
+    border-radius: 1.56vw;
+    filter: brightness(0.6);
+
+}
+#sida3 {
+    height: 63vw;
+
+}
+.goActive {
+    background-color: #293844;
+    margin:7.8vw 5vw;
+    height:50.4vw;
+    border-radius: 1.56vw;
+    display: flex;
+    flex-direction: column;
+
+}
+.items {
+
+    top:3vw;
+    position: relative;
+    left: 3.96vw;
+}
+.items h2 {
+    margin-bottom:0;
+    font-size: 3.5vw;
+    text-transform: uppercase;
+
+}
+.items p {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 1.25vw;
+    text-align: left;
+    margin-bottom: 4vw;
+    white-space: pre-line;
+}
+#appimage {
+
+    position: relative;
+    z-index: 0;
+
+    height:55.4vw; width: 65vw; top: -29vw; left: 24vw;
+}
+#appimage img {
+    object-position: right ;
+    object-fit:cover;
+    height: 55.4vw;
+    width: 100%;
+}
+.aboutAPP {
+    display:grid;
+    grid-template-areas:
+            "a b c"
+            "d e f";
+
+    grid-template-rows: 7vw 7vw ;
+    height: 100vw;
+    width: 22vw;
+    position: relative  ;
+    top: 5vw;
+    left: 2vw;
+    justify-items: center;
+    row-gap: 1vw;
+
+
+}
+.about {
+    font-size: 0.6vw;
+    font-family: Montserrat, arial, sans-serif;
+    font-weight: bold;
+    justify-items: center;
+
+    padding-top:0;
+}
+.circle {
+    height: 4.96vw;
+    width: 4.96vw;
+    background-color: #293844;
+    border-radius: 50%;
+    box-shadow:0 0 0.5vw rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#text1 {
+    position: absolute;
+    left: 0.8vw;
+
+}
+#circle1 {
+    grid-area: a;
+}
+#circle2 {
+    grid-area: b;
+}
+#circle3 {
+    grid-area: c;
+}
+#circle4 {
+    grid-area: d;
+}
+#circle5 {
+    grid-area: e;
+}
+#circle6 {
+    grid-area: f;
+}
+.symbol {
+    font-size: 3vw;
+}
+
+#sida4 {
+    height: 22vw;
+}
+.kontaktaOss{
+    display: grid;
+    grid-template-areas:
+    "a b d c";
+    grid-template-columns: 0.5fr 0.9fr 0.5fr 0.2fr;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, arial, sans-serif;
+    background-color: #F0F0F0;
+
+}
+.appear {
+    opacity: 1;
+    transition: all 0.5s;
+    transform: translateY(1vw);
+}
+.appear.inView {
+    opacity: 1;
+    transform:none;
+
+}
+.kontaktaOss h4{
+    font-weight: 400;
+    color: #293844;
+    margin-left: 3.5vw;
+    font-size: 1.425vw
+
+}
+.kontaktaOss h1{
+    color: #293844;
+    font-weight: 800;
+    text-decoration-line: underline;
+    text-decoration-color: #ED8606;
+    text-underline-offset: 0.5vw;
+    text-decoration-thickness: 0.2vw;
+    font-size: 4.68vw;
+    margin-left: 3.3vw;
+
+}
+.kontaktaOss span{
+    color: #293844;
+    width:2vw;
+    font-size: 2vw;
+
+
+
+
+}
+.kontaktaOss button{
+    grid-area: c;
+}
+.kontaktaOss .orangeButton{
+    background-color: #ED8606;
+    height:6vw;
+    width: 6vw;
+    border-radius: 50%;
+    margin-left: 2vw;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+footer{
+    height:23.2vw;
+}
+.footer {
+    background-color: #1E1E1E;
+    Font-family: Montserrat, arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+    "a b c d";
+    grid-template-columns: 0.38fr 0.35fr 0.35fr 0.5fr;
+    border-top: solid 0.5vw #ED8606;
+
+}
+.footer img {
+    height :5.2vw;
+    grid-area:a;
+    padding: 1.5vw 0 0 2.2vw
+}
+.footer ul{
+    font-size:1.2vw;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    list-style-type: none;
+}
+.footer li{
+    margin-bottom: 1.5vw;
+}
+.footer li h4{
+    font-weight: bold;
+    font-size:1.51vw;
+    margin-bottom:0;
+    font-family: Montserrat, arial, sans-serif;
+}
+#list1 {
+    grid-area: b;
+
+
+}
+
+
+#list2 {
+    grid-area: c;
+    padding-left:6.7vw;
+}
+#list3 {
+    grid-area: d;
+
+}
+#list3 li{
+    padding-left:1.1vw;
+
+}
+.socials{
+    justify-content: space-between;
+    display: flex;
+    width: 7vw;
+}
+
+#fb {
+    font-size: 3vw;
+    padding-top: 0.2vw;
+    font-weight: 400;
+}
+#ig{
+    font-size: 3.5vw;
+}
+.APP {
+    color: #ED8606;
+}
+
+#trainsida2 {
+    height: 150vw;
+}
+.trainForm {
+    display: grid;
+    grid-template-areas: ". a b .";
+    grid-template-columns: 4.11vw 45.9vw 45.9vw 4.11vw ;
+    height: 27.97vw;
+    padding-top: 6vw;
+
+}
+@media (min-width: 501px){
+
+    .trainForm:nth-child(odd) {
+        grid-template-areas: ". a b .";
+    }
+    .trainForm:nth-child(odd) .traintext {
+        justify-self: start;
+    }
+    .trainForm:nth-child(odd) .trainbild {
+        justify-self: end;
+    }
+
+    .trainForm:nth-child(even) {
+        grid-template-areas: ". b a .";
+    }
+    .trainForm:nth-child(even) .traintext{
+        justify-self: end;
+    }
+    .trainForm:nth-child(even) .trainbild {
+        justify-self: start;
+    }
+}
+
+
+.trainbild {
+    grid-area: b;
+    height: 27.97vw;
+    width: 41.98vw;
+    display: flex;
+
+}
+.trainbild img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter:drop-shadow(0vw 0.3vw 0.3vw rgba(0, 0, 0, 0.5));
+}
+.traintext {
+    grid-area: a;
+
+    display: flex;
+    flex-direction: column;
+}
+.traintext h2 {
+    margin:0;
+    font-size: 3.5vw;
+    text-transform: uppercase;
+    color:#293844;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+}
+.traintext h3 {
+    color:#D67505;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2.08vw;
+    font-weight: 500;
+    margin-top:0.7vw;
+}
+.traintext p {
+    color: #293844;
+    font-family: Roboto, sans-serif;
+    font-size: 1.25vw;
+    font-weight: 400;
+    margin-bottom:4vw;
+}
+#gym-train.trainForm .traintext h2,
+#gym-train.trainForm .traintext h3,
+#gym-train.trainForm .traintext p{
+
+    margin-right:0.8vw;
+}
+#train-online-train.trainForm .traintext h2,
+#train-online-train.trainForm .traintext h3,
+#train-online-train.trainForm .traintext p{
+    margin-right:1.9vw;
+}
+
+
+
+.facilities-pil{
+    display: flex;
+    flex-direction:row;
+
+}
+
+.facilities-pil a {
+    color: #293844;
+    font-family: Roboto, sans-serif;
+    font-size: 1.67vw;
+    font-weight: 600;
+    text-decoration-thickness: 4.88%;
+    text-underline-offset: 0.15vw;
+
+
+
+}
+.facilities-pil span{
+    color: #293844;
+    font-weight: 900;
+    font-size: 2vw;
+    margin-left: auto;
+
+
+}
+#ourGyms-sida2 {
+    height:98.2vw;
+}
+.mobile-searchgym{
+    display:none;
+}
+
+.gymcontainer{
+    display: grid ;
+    grid-template-areas: ". a b .";
+    grid-template-columns: 5.4vw 44.6vw 44.6vw 5.4vw;
+
+    margin-top: 3vw;
+}
+#search {
+    grid-area: a;
+    margin-top: 1vw;
+}
+.searchcontainer{
+    width: 40.8vw;
+    height: 42vw;
+
+}
+
+.searchcontainer h2 {
+
+    color: #293844;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+
+}
+.searchcontainer input {
+    width:100%;
+    height: 3.6vw;
+    border:solid 0.1vw #293844;
+    padding:0 0 0 1vw;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size:1.25vw;
+    color:#293844;
+
+
+}
+.allgyms {
+    margin-top: 3.4vw;
+    width:100%;
+    height: 60%;
+    overflow-y: auto;
+    scrollbar-color: #f0f0f0 #d9d9d9;
+}
+
+.gym{
+
+    width: 97.5%;
+    height: 15.3vw;
+    background-color: #ffffff;
+    margin-bottom: 1.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display:grid;
+    grid-template-areas:
+            "a b c"
+            "d e f";
+    grid-template-columns: 0.85fr 0.85fr 0.75fr;
+    grid-template-rows: 5vw;
+
+}
+.cardinfo{
+    display:contents;
+}
+.gym.active{
+    background-color: #f0f0f0;
+}
+.gym.active .bemanningstider {
+    border-color: #ffffff;
+}
+
+
+.lasmer {
+    grid-area: c;
+    padding-right: 1.1vw;
+    justify-self: end;
+    padding-top: 1vw;
+
+}
+.lasmer button {
+    width: 9.5vw;
+    height: 2.8vw;
+    font-size: 1.5vw;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 0.1vw 0.2vw #293844;
+}
+.gymheader {
+    grid-area: a;
+    grid-column: span 2;
+    color: #ED8606;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 2.5vw;
+    align-self: center;
+    padding-left: 1.6vw;
+}
+.gymkategori{
+    height: 90%;
+}
+.gymkategori h4 {
+    color: #ED8606;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 0.95vw;
+    margin-bottom:0;
+    text-transform: uppercase;
+
+}
+.gymkategori p {
+    color: #293844;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    font-size: 0.9vw;
+    margin-top: 0.5vw;
+
+}
+.adress{
+    grid-area: d;
+    padding-left: 1.6vw;
+}
+.E-post {
+    grid-area: d;
+    padding-left: 1.6vw;
+    padding-top: 4.5vw;
+}
+.bemanningstider {
+
+    grid-area: e;
+    justify-self:center;
+    border-right:0.15vw solid #293844;
+    border-left:0.15vw solid #293844;
+    padding-left: 1.9vw;
+    padding-right: 1.9vw;
+    transition: all 0.3s;
+
+}
+.symbolcontainer {
+    grid-area: f;
+    display: grid;
+    grid-template-areas:
+            " .a b ."
+            ". c d .";
+    grid-template-columns: 0.1fr 0.6fr 0.6fr 0.1fr;
+    grid-template-rows: repeat(2, 1fr);
+    height: 88%;
+
+
+
+}
+
+.gymsymboler{
+
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
+.gymsymboler p {
+    color: #293844;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 0.8vw;
+    margin:0.3vw 0 0 0 ;
+
+}
+.gymsymboler span {
+    color: #293844;
+    font-size: 2vw;
+}
+.klocka {
+    grid-area: a;
+}
+.hantel{
+    grid-area: b;
+}
+.parkering{
+    grid-area: c;
+}
+.grouptraining{
+    grid-area: d;
+}
+#Bodenarena .symbolcontainer{
+    grid-template-areas:
+            " a b "
+            " c d "
+            " e f ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+#Bodenarena .gymsymboler span{
+    font-size: 1.5vw;
+
+}
+#Furunäset .symbolcontainer{
+    grid-template-areas:
+            " a b "
+            " c d "
+            " e f ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+#Furunäset .gymsymboler span{
+    font-size: 1.5vw;
+
+}
+#Backcity .symbolcontainer{
+    grid-template-areas:
+            " a b "
+            " c d "
+            " e f ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+#Backcity .gymsymboler span{
+    font-size: 1.5vw;
+}
+
+
+.utegym {
+    grid-area: e;
+}
+.padel {
+    grid-area: f;
+}
+.sjukgymnast{
+    grid-area:e;
+}
+.map{
+    grid-area: b;
+    height:100%;
+    z-index: 2;
+    display: grid;
+    grid-template-areas:"a";
+}
+#map{
+    grid-area: a;
+    height: 95%;
+}
+
+main.thegyms #hero{
+
+    height:45.73vw;
+}
+.thegyms #hero .HeaderText{
+
+    margin-bottom:0;
+    font-size: 5vw;
+}
+.heroinfo {
+    background-color: #1E1E1E;
+    width: 100%;
+    height: 14vw;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    display: grid;
+    grid-template-areas: ". a b c .";
+    grid-template-columns: 0.14fr 1fr 1fr 1fr 0.14fr;
+
+}
+.heroinfo h4 {
+    color: #ED8606;
+    opacity: 90%;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.7vw;
+    font-weight: 500;
+    border-bottom: 0.1vw solid #636363;
+    width: 11%;
+    margin-bottom: 1vw;
+
+    padding-bottom: 0.625vw;
+}
+.heroinfo p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.275vw;
+    font-weight: 400;
+}
+.heroinfo #adress {
+    grid-area: a;
+    padding-left:0;
+
+}
+.heroinfo #e-post{
+    grid-area: b;
+
+}
+.heroinfo #e-post .container{
+    justify-items: start;
+    justify-self: center;
+}
+.heroinfo #e-post .container h4{
+    white-space: nowrap;
+    width:25%;
+
+}
+.heroinfo #bemanningstider {
+    grid-area: c;
+    padding: 0;
+    border:none;
+    justify-self: end;
+}
+.heroinfo #bemanningstider .container {
+    justify-items:start;
+}
+.heroinfo #bemanningstider .container h4{
+    width: 53%;
+}
+.tabell-tider{
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.275vw;
+    font-weight: 500;
+
+
+}
+.tabell-tider .dagar {
+    padding-right: 4.7vw;
+}
+
+.inforuta{
+
+    height: 19vw;
+    width:50%;
+    justify-self: center;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 10;
+    border: 0.01vw ridge rgba(237, 134, 6, 0.3);
+    box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+    bottom:-16.7vw;
+    transform: translateX(50%);
+    display: grid;
+    grid-template-areas: "a""b";
+    grid-template-rows: 0.4fr 1fr;
+    justify-items: center;
+    font-family: Roboto, sans-serif;
+}
+.inforuta h4{
+    font-size: 1.8vw;
+    color:#293844;
+    grid-area: a;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.inforuta p{
+    color: #293844;
+    grid-area: b;
+    font-weight: 500;
+    font-family: Roboto, sans-serif;
+    font-size: 1.125vw;
+    width: 70%;
+}
+
+.aboutgym {
+
+    margin:20vw 5vw 0 5vw;
+    border: 0.15vw ridge rgb(41, 56, 68, 0.25);
+    border-radius: 1vw;
+    height: 45vw ;
+    box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-areas: "a" "b";
+    grid-template-rows: 0.3fr 1fr;
+
+
+}
+.aboutgym h2{
+    color: #ed8606;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 3.3vw;
+    text-transform: uppercase;
+    padding-left: 5.6vw;
+    padding-top: 1vw;
+}
+main.thegyms .herotext{
+    top:20vw;
+}
+main.thegyms #sida2 {
+
+    top:-60vw;
+}
+main.thegyms #sida3 {
+    height:45vw;
+
+
+}
+.abouttext{
+    display: grid;
+    grid-template-areas: " a b c";
+    grid-template-columns: repeat(3, 1fr);
+    width:100%;
+
+}
+.erbjudanden{
+    grid-area: a;
+    list-style: none;
+    justify-self: center;
+    align-content: start;
+    padding:0;
+    width:90%;
+}
+.erbjudanden li{
+    color: #293844;
+    font-size: 1.5vw;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+    margin-bottom: 1vw;
+    text-align: justify;
+}
+.kolumn2{
+    grid-area: b;
+    width: 90%;
+    align-self: start;
+    justify-self: center;
+    border-left: 0.3vw solid #293844;
+    border-right: 0.3vw solid #293844;
+    padding: 0 1.2vw;
+    height: 80%;
+}
+.kolumn2 p{
+    white-space: pre-line;
+    color: #293844;
+    font-size: 1.5vw;
+    text-align: justify;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+}
+.kolumn3{
+    grid-area: c;
+    align-items: start;
+    display: flex;
+    width: 90%;
+    justify-self: center;
+
+}
+.kolumn3 p{
+    color: #293844;
+    font-family: "Roboto Condensed", sans-serif;
+
+    font-weight: 500;
+    font-size: 1.5vw;
+    text-align: justify;
+
+}
+
+.gymvidplace{
+    display:flex;
+    width:60vw;
+    justify-self: center;
+    margin-top: 3vw;
+    box-shadow:0 0 0.2vw rgba(0, 0, 0, 0.50);
+    height: 34vw;
+}
+.gymvideo {
+    width: 100%;
+    height: auto;
+}
+body#bli-medlem{
+    background-color: #1E1E1E;
+}
+body#bli-medlem #hero{
+    background-image: url("images/ourGyms2.jpg");
+    background-size: cover;
+    background-position-y: center;
+    height: 45.73vw;
+
+}
+body#bli-medlem .herotext{
+    top:27vw;
+}
+body#bli-medlem #sida2{
+
+    height:100vw;
+}
+.blackfade{
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(30,30,30,0.25) 15%, rgba(30,30,30,0.50) 25%, rgba(30,30,30,0.9) 50%, rgba(30,30,30,1) 100%);
+    width: 100%;
+    height: 14vw;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+}
+
+.del1{
+    height: 45vw;
+    border-bottom: 0.01vw dashed rgba(240, 240, 240, 1);
+}
+.del1 form{
+    height: 100%;
+}
+.del1-grid{
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+.del1 form{
+    height: 100%;
+}
+.sökanläggning{
+    width:60%;
+    padding-left:6vw;
+    padding-top:6vw;
+}
+.sökanläggning h2{
+    font-size: 2.5vw;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    margin-bottom: 3vw;
+    color: #ED8606;
+
+}
+.sökanläggning input{
+    height:3.5vw;
+    width:100%;
+    background-color: rgba(87, 87, 87, 0.4);
+    border:none;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 1.15vw;
+    padding-left: 0.5vw;
+    border-radius: 0.5vw;
+    outline: none;
+}
+.sökanläggning input:focus{
+    outline: 0.1vw solid #ED8606;
+}
+.dropdown-list{
+    list-style: none;
+    background-color: rgba(87, 87, 87, 0.4);
+    overflow-y: auto;
+    width: 100%;
+    padding:0;
+    height: 15vw;
+
+}
+.dropdown-list li {
+    padding: 8px;
+    cursor: pointer;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
+}
+.dropdown-list li:hover {
+    background-color: #57575766;
+}
+.fortsätt{
+    align-self: end;
+    justify-self: end;
+    padding-right: 6vw;
+    padding-bottom: 2vw;
+}
+.fortsätt .orangeButton{
+    width: 12vw;
+    height: 3vw;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.6vw;
+    cursor: pointer;
+    transition:all 0.3s ease-in-out, color 0.3s ease-in-out;
+
+
+}
+.fortsätt .orangeButton:hover{
+    transform: scale(1.05);
+    border: 0.01vw solid #ffffff;
+}
+.del2{
+    height: 47vw;
+}
+.del2-grid{
+    display: grid;
+    grid-template-areas:
+            "a"
+            "b"
+            "c";
+    grid-template-rows: 0.3fr 1fr 0.2fr;
+    height: 100%;
+}
+.del2-grid h2{
+    font-size: 2.5vw;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    margin-bottom: 3vw;
+    color: #ED8606;
+    padding-left: 6vw;
+    padding-top: 6vw;
+    grid-area: a;
+
+}
+#abonnemang {
+    grid-area: b;
+    overflow-x:auto ;
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    scrollbar-color: #171717 transparent;
+}
+
+.abonnemangcard{
+
+    height: 90%;
+    width: 19.04vw;
+    background-color: #1E1E1E;
+    border: 0.1vw solid #ED8606;
+    flex-shrink: 0;
+    margin:0 1vw;
+
+
+
+}
+.abonnemanggrid{
+    display: grid;
+    grid-template-areas:
+            "a"
+            "b"
+            "c";
+    grid-template-rows: 1fr 0.78fr 0.42fr;
+    height: 100%;
+    width: 100%;
+}
+.abonnemanggrid img{
+    grid-area: a;
+    height: 100%;
+    width: 100%;
+
+}
+.abonnemangtext {
+    grid-area: b;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.abonnemangtext h5{
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 1.2vw;
+    padding-left: 1.2vw;
+    margin-top: 1vw;
+}
+.pris {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 1.9vw;
+    color: #ED8606;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+
+.väljabonnemang {
+
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.väljabonnemang button{
+    background-color: transparent;
+    width: 90%;
+    color: #ED8606;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+.väljabonnemang button:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.väljabonnemang button:focus{
+    border-color: rgba(255, 255, 255, 1);
+    background-color: #ed8606;
+    color: #293844;
+
+}
+
+/* för mobil*/
+@media (max-width: 500px ){
+    br{
+        display: none;
+    }
+    #draggable {
+        display: none;
+    }
+
+    header{
+        height: 20vw;
+        width:100vw;
+        position: fixed;
+        background-color: #1E1E1E;
+
+    }
+    body#home header{
+        position: fixed;
+        background:transparent;
+    }
+    body#home header.visa {
+        background-color: #171717;
+        filter: drop-shadow(0 0 0.41vw #000000);
+    }
+    body#home header.visa #logo {
+        filter:none;
+    }
+    .navboard {
+        height: 100%;
+        align-content: center;
+        display: grid;
+        grid-template-areas: " a b c";
+        grid-template-columns: 0.3fr 1fr 0.3fr;
+        justify-items: center;
+
+    }
+    .lock{
+        display:block;
+        align-content: center;
+        padding: 0;
+
+
+    }
+    .lock span{
+        font-size: 9vw;
+    }
+
+    .hamburger {
+        cursor:pointer;
+        display:block;
+        background: none;
+        width: 17vw;
+        border: none;
+        height: 10vw;
+        align-self: center;
+    }
+    .hamburger:hover{
+        border: none;
+    }
+
+    .bar {
+        width: 80%;
+        height: 0.6vw;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
+        margin: 2vw 0;
+
+        transform-origin: 50% 50%;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(2.54vw) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-2.54vw) rotate(-45deg);
+    }
+    .Navlist{
+        display:none;
+    }
+    #Navlist-mobile {
+        background-color: #171717;
+        width: 100%;
+        height: 100%;
+        position:fixed;
+        display: none;
+        z-index: 990;
+    }
+    #Navlist-mobile.show {
+        display: block;
+    }
+    #Navlist-mobile .grid{
+        display: grid;
+        grid-template-areas: ".""a""b""c""d""e""f";
+        grid-template-rows:  0.7fr 0.25fr 0.25fr 0.25fr 0.25fr 0.2fr 0.25fr;
+        height: 75%;
+        align-items: center;
+        justify-content: left;
+        margin-top: 20vw;
+    }
+
+    #Navlist-mobile.show #ourGyms{
+        grid-area: a;
+        margin-left:15vw;
+        width: 100%;
+    }
+    #Navlist-mobile.show #train{
+        grid-area: b;
+        margin-left:15vw;
+
+    }
+    #Navlist-mobile.show #företag {
+        grid-area: c;
+        margin-left:15vw;
+
+    }
+    #Navlist-mobile.show #abonnemang2 {
+        grid-area: d;
+        margin-left:15vw;
+    }
+    #Navlist-mobile.show #bliMedlem{
+        grid-area: f;
+        margin-left:15vw;
+
+    }
+    #Navlist-mobile.show #kontakta{
+        grid-area: e;
+        margin-left:15vw;
+        width: 70%;
+        height: 70%;
+    }
+
+    h2 {
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        font-size: 2.85vw;
+    }
+
+    #logo {
+        padding-left:0;
+        padding-top: 2vw;
+
+        filter: brightness(1);
+    }
+    body#home #logo{
+        filter:brightness(0.5);
+    }
+    body#home #logo.show{
+        filter:none;
+    }
+    #logo img {
+        height:15vw;
+    }
+
+
+    .Navlist a {
+        Font-family: Montserrat, arial, sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 7vw;
+        transition: none;
+        width: 50%;
+        height: 60%;
+    }
+    .Navlist a:hover {
+        color: white;
+    }
+
+    #hero video {
+        position: absolute;
+
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover;
+
+    }
+    main#trainPage #hero{
+        background-image: url('images/Train.jpg');
+        background-size: cover;
+        background-position-y: 40%;
+    }
+    main#trainPage #hero .HeaderText {
+        font-size: 8vw;
+        font-weight: 600;
+        margin-left: 10vw;
+
+    }
+    main#anderstorp #hero{
+        background-image: url('images/anderstorp.jpg');
+        background-size: cover;
+        background-position: left;
+    }
+    main#our-gym #hero{
+        background-image: url('images/ourGyms2.jpg');
+        background-size: cover;
+        background-position-y: 60%;
+    }
+    .heroimage {
+
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+    }
+    .dimoverlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    main.thegyms .dimoverlay {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(30, 30, 30, 0.6) 60%, rgba(30, 30, 30, 1) 100%);
+    }
+
+
+    .shadow {
+        box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
+
+    }
+
+
+    .herotext{
+        z-index: 500;
+        position: relative;
+        margin-top: 0;
+        top:30vw;
+
+    }
+
+    .HeaderText {
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 800;
+        font-size: 11vw;
+        margin-left: 3vw;
+        text-transform: uppercase;
+        margin-top:0;
+
+    }
+    .HeaderText br{
+        display: none;
+    }
+    .orangeButton {
+        background-color: #ED8606;
+        width: 40.7vw;
+        height:8.9vw;
+        position: relative;
+        border-radius: 5vw;
+        border-color: #ed8606;
+        border-style: solid;
+        border-width: thin;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+        font-size: 3.34vw;
+        transition:all 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        border: 0.01vw solid #ffffff;
+    }
+    .herotext button{
+        margin-left: 3vw;
+    }
+
+    .Navlist .orangeButton {
+
+        border-radius:4vw;
+        height:15vw;
+        width: 38vw;
+        font-size: 3vw;
+        transition: none;
+
+    }
+
+    .slogan {
+        display: flex;
+        justify-content: center;
+    }
+
+    #hero {
+        height:50vw;
+        position: relative;
+        width: 100%;
+
+    }
+    body#home #hero {
+        height:180vw;
+    }
+    main#home .herotext {
+        top:80vw;
+    }
+
+    #sida2{
+        width: 100%;
+        height: 393vw;
+        align-items: center;
+
+    }
+    .BlueHeaders {
+        color: #293844;
+        text-transform: uppercase;
+        margin-bottom:0;
+        text-align: center;
+        font-size:6.1vw;
+        width: 80%;
+    }
+
+    .cards {
+        grid-template-areas:
+                ". a ."
+                ". b ."
+                ". c .";
+        grid-template-rows: repeat(3,118.65vw) ;
+        grid-template-columns:0.1fr 1fr 0.1fr;;
+        height: 359vw;
+        grid-row-gap: 5vw;
+    }
+    .card{
+        transition: all 0.3s ease-in-out;
+        border-radius: 5vw;
+        margin-bottom:0;
+    }
+    .card img{
+        height:100%;
+        width:100%;
+
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.5);
+
+    }
+    #card1 {
+        grid-area: a;
+        height: 100%;
+
+    }
+
+    #card2 {
+        grid-area: b;
+        height: 100%;
+
+    }
+
+    #card3 {
+        grid-area: c;
+        height: 100%;
+    }
+
+
+
+    .cards li{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+    }
+
+    .cardText {
+        top:0.39vw;
+        position: absolute;
+
+        padding-left: 5vw;
+        justify-content: space-between;
+
+    }
+    .cards a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed", sans-serif;
+        height:100%;
+        width:100%;
+
+    }
+    .cards h3 {
+        font-size: 6.96vw;
+        font-weight: 600;
+    }
+
+    .cards p {
+        font-family: Roboto ,sans-serif;
+        font-weight: 700;
+        font-size: 3.34vw;
+        padding-top: 82vw;
+        text-align:left;
+
+
+
+
+    }
+    .cards p br{
+        display: block;
+    }
+
+
+    .cards img {
+        border-radius: 5vw;
+        filter: brightness(0.6);
+
+    }
+    #sida3 {
+        height: 175vw;
+
+    }
+    .goActive {
+        margin: 6.8vw 0 0 0;
+        height:160vw;
+        border-radius: 0;
+    }
+    .items {
+        display: flex;
+        flex-direction: column;
+        top:1vw;
+        position: relative;
+        left:0;
+        justify-content: center;
+        align-items: center;
+    }
+    .items h2 {
+        margin-bottom:0;
+        font-size: 8.2vw;
+        margin-top:6.8vw;
+
+    }
+    .items p {
+        font-weight: 400;
+        font-size: 3.7vw;
+        justify-self: center;
+        margin-bottom: 5vw;
+        text-align:justify;
+        white-space: normal;
+        width: 75%;
+
+    }
+    .items p span {
+        display: none;
+    }
+    #appimage {
+
+        position: relative;
+        z-index: 0;
+        height:auto; width: 100%; top:0; left:0;
+    }
+    #appimage img {
+        height: 70vw;
+        width: 100%;
+    }
+    .items a{
+        padding-left: 0;
+    }
+    .aboutAPP {
+
+        grid-template-rows:none;
+        height: 50vw;
+        width: 60vw;
+        top: 5vw;
+        left: 0;
+        row-gap: 2vw;
+        align-self: center;
+
+
+    }
+    .about {
+        font-size: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .circle {
+        height: 16.56vw;
+        width: 16.56vw;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    #text1 {
+        position: relative;
+        left: 0;
+
+    }
+    .symbol {
+        font-size: 10vw;
+        font-weight: 100;
+    }
+
+    #sida4 {
+        height: 80vw;
+    }
+    .kontaktaOss{
+        grid-template-areas:
+                "a"
+                "b"
+                "c";
+        grid-template-rows: repeat(3,1fr) ;
+        grid-template-columns: none;
+        justify-items: center;
+    }
+    .kontaktaOss h4{
+        grid-area: a;
+
+        margin: 0;
+        font-size: 4.3vw
+
+
+    }
+    .kontaktaOss h1{
+        grid-area: b;
+        align-self: start;
+        font-size: 8.6vw;
+        margin-left: 0;
+        text-underline-offset: 1vw;
+        text-decoration-thickness: 0.4vw;
+
+    }
+    .kontaktaOss span{
+        width:6.68vw;
+        font-size: 6.68vw;
+    }
+    .kontaktaOss .orangeButton{
+        height:20vw;
+        width: 20vw;
+        margin-left: 0;
+    }
+    footer{
+        height:180vw;
+    }
+    .footer {
+
+        display: grid;
+        grid-template-areas:
+                "a"
+                "b"
+                "c"
+                "d";
+
+        grid-template-columns: none;
+        border-top: solid 1vw #ED8606;
+        height: 100%;
+
+    }
+    .footer img {
+        height :15vw;
+        grid-area:d;
+        padding: 0 0 0 0;
+        justify-self: center;
+        align-self: end;
+        margin: 5vw;
+    }
+    .footer ul{
+        font-size:3.7vw;
+    }
+    .footer li{
+        margin-bottom: 3vw;
+    }
+    .footer li h4{
+        font-size:4.3vw;
+        margin-bottom:0;
+    }
+    #list1 {
+        grid-area: a;
+        padding-left: 5vw;
+    }
+
+
+    #list2 {
+        grid-area: b;
+        padding-left:5vw;
+    }
+    #list3 {
+        grid-area: c;
+        padding-left: 5vw;
+
+    }
+    #list3 li{
+        padding-left:0;
+
+    }
+    .socials{
+        width: 17vw;
+        padding-bottom: 7vw;
+    }
+
+    #fb {
+        font-size: 8.57vw;
+        padding-top: 0.8vw;
+        font-weight: 400;
+    }
+    #ig{
+        font-size: 10vw;
+    }
+    #trainsida2 {
+        height: 550vw;
+    }
+    .trainForm {
+        grid-template-areas:
+                "b"
+                "a";
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr) ;
+        height: 130vw;
+        padding: 0;
+        justify-content: center;
+        justify-items: center;
+        margin: 10vw 0;
+    }
+
+    .trainbild {
+        grid-area: b;
+        height: 60vw;
+        width: 90vw;
+
+    }
+
+    .traintext {
+        grid-area: a;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        width: 90vw;
+
+    }
+    .traintext h2 {
+        font-size: 9vw;
+    }
+    .traintext h3 {
+        font-size: 5.35vw;
+    }
+    .traintext p {
+        font-size: 3.2vw;
+    }
+
+
+    .facilities-pil{
+        display: flex;
+        flex-direction:row;
+
+    }
+
+    .facilities-pil a {
+
+        font-size: 4.27vw;
+        text-decoration-thickness: 0.4vw;
+        text-underline-offset: 0.5vw;
+
+    }
+    .facilities-pil span{
+        color: #293844;
+        font-weight: 900;
+        font-size: 5.1vw;
+    }
+    #train-online-train .facilities-pil span {
+        transform: rotate(180deg)
+    }
+    #gym-train .facilities-pil span {
+        transform: rotate(180deg);
+    }
+    #ourGyms-sida2 {
+        height:200vw;
+    }
+    .computer-searchgym{
+        display: none;
+    }
+    .mobile-searchgym{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-area: a
+    }
+
+
+    .gymcontainer{
+        display: grid ;
+        grid-template-areas:
+                "a"
+                "b";
+        grid-template-columns: none;
+        grid-template-rows: repeat(2,1fr) ;
+        height: 100%;
+        width: 100vw;
+        margin-top: 0;
+        justify-content: center;
+    }
+    #search {
+        grid-area: b;
+        margin-top: 5vw;
+    }
+    .searchcontainer{
+        width: 90vw;
+        height: 90vw;
+
+    }
+
+    .mobile-searchgym h2 {
+
+        color: #293844;
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 600;
+        font-size: 5.5vw;
+
+    }
+    .mobile-searchgym input {
+        height: 9vw;
+        border: solid 0.05vw #293844;
+        padding:0 0 0 2vw;
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        font-size:4.1vw;
+        color: rgba(41, 56, 68, 0.5 );
+
+        width: 90vw;
+
+    }
+
+    .allgyms {
+        margin-top: 3.4vw;
+        width:100%;
+        height: 90%;
+        overflow-y: auto;
+        scrollbar-color: #f0f0f0 #d9d9d9;
+    }
+
+    .gym{
+
+        width: 97.5%;
+        height: 61.5vw;
+        margin-bottom: 10vw;
+        cursor: pointer;
+        display:grid;
+
+        grid-template-areas: "a"
+    "b""c""d";
+        grid-template-columns:none;
+        grid-template-rows: repeat(4,1fr) ;
+    }
+
+
+
+    .lasmer {
+        grid-area: d;
+        padding-right: 1.1vw;
+        justify-self: center;
+        padding-top: 1vw;
+        align-self: center;
+
+    }
+    .lasmer button {
+        width: 60.7vw;
+        height: 9.2vw;
+        font-size: 5vw;
+        font-family: "Roboto Condensed", sans-serif;
+        border-radius: 2.5vw;
+        font-weight: 600;
+    }
+    .cardinfo{
+        grid-area: c;
+        display: grid;
+        grid-template-areas: "a b c";
+        grid-template-columns:repeat(3,1fr);
+        align-self: start;
+    }
+    .gymheader {
+        grid-area: a;
+
+        font-size: 7vw;
+        align-self: center;
+        padding-left: 1.6vw;
+        margin:0;
+    }
+    .gymkategori{
+        height: 90%;
+    }
+    .gymkategori h4 {
+
+        font-size: 3vw;
+        margin-bottom:0;
+        text-transform: uppercase;
+
+    }
+    .gymkategori p {
+        font-weight: 600;
+        font-size: 2.3vw;
+        margin-top: 0.5vw;
+        white-space: pre-line;
+
+    }
+    .adress{
+        grid-area: b;
+        padding-left: 1.6vw;
+    }
+    .E-post {
+        grid-area: a;
+        padding-left: 1.6vw;
+        padding-top: 0;
+    }
+    .bemanningstider {
+
+        grid-area: c;
+        justify-self:center;
+        border-right:none;
+        border-left:none;
+        padding-left: 1.9vw;
+        padding-right: 1.9vw;
+        transition: all 0.3s;
+
+    }
+    .symbolcontainer {
+        grid-area: b;
+        display: grid;
+        grid-template-areas:
+            " a b c d";
+        grid-template-columns: repeat(4,1fr) ;
+        grid-template-rows: none;
+        height: 70%;
+        border-bottom: 0.2vw solid #293844;
+        padding:0;
+    }
+    .gym.active .symbolcontainer {
+        border-color: #FFFFFF;
+    }
+
+    .gymsymboler{
+
+        display: flex;
+        flex-direction: column;
+        align-self:end;
+        align-items: center;
+        justify-items: center;
+    }
+
+
+
+    .gymsymboler p {
+        color: #293844;
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 500;
+        font-size: 2vw;
+        margin:1vw 0 0 0;
+    }
+    .gymsymboler span {
+        color: #293844;
+        font-size: 5vw;
+    }
+    .klocka {
+        grid-area: a;
+    }
+    .hantel{
+        grid-area: b;
+    }
+    .parkering{
+        grid-area: c;
+    }
+    .grouptraining{
+        grid-area: d;
+    }
+    #Bodenarena .symbolcontainer{
+        grid-template-areas:
+            " a b c d e f ";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: none;
+
+
+    }
+    #Bodenarena .gymsymboler span{
+        font-size: 4vw;
+
+    }
+    #Furunäset .symbolcontainer{
+        grid-template-areas:
+            " a b c d e ";
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: none
+
+
+    }
+    #Furunäset .gymsymboler span{
+        font-size: 4.5vw;
+
+    }
+    #Backcity .symbolcontainer{
+        grid-template-areas:
+            " a b c d e ";
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: none;
+
+
+    }
+    #Backcity .gymsymboler span{
+        font-size: 4.5vw;
+    }
+    #Gammelstad .symbolcontainer,
+    #Björksgatan .symbolcontainer,
+    #Porsön .symbolcontainer{
+        grid-template-areas: " a b c";
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #LyckseleN .symbolcontainer span,
+    #Björksgatan .symbolcontainer span,
+    #Porsön .symbolcontainer span{
+        font-size: 5.5vw;
+    }
+
+
+    .map{
+        grid-area: a;
+        height: 100vw;
+
+        display: grid;
+        grid-template-areas:"a""b"
+    }
+    #map{
+        grid-area: b;
+        height: 71.8vw;
+
+    }
+    main.thegyms #hero{
+
+        height:109vw;
+    }
+    main.thegyms .heroimage{
+        height:50vw;
+    }
+    .thegyms #hero .HeaderText{
+
+        margin-bottom: 0;
+        font-size: 11vw;
+    }
+    .heroinfo {
+        height: 110vw;
+        position: relative;
+        bottom: -35vw;
+        display: grid;
+        grid-template-areas: "a""b""c";
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+    .heroinfo h4 {
+        opacity: 90%;
+        font-size: 6.15vw;
+        border-bottom: 0.2vw solid #8a8a8a;
+        width: 11%;
+
+    }
+    .heroinfo p {
+        font-size: 4.1vw;
+        font-weight: 500;
+        font-family: Roboto, serif;
+    }
+    .heroinfo #adress {
+        grid-area: a;
+        padding-left: 10vw;
+
+    }
+    .heroinfo #e-post{
+        grid-area: b;
+        padding-left: 10vw;
+
+    }
+    .heroinfo #e-post .container{
+        justify-items: start;
+        justify-self: left;
+    }
+    .heroinfo #bemanningstider {
+        padding: 0 0 10VW 10vw;
+        justify-self: left;
+
+    }
+
+    .heroinfo #bemanningstider .container {
+        justify-items:start;
+    }
+    .tabell-tider{
+        font-size: 4.1vw;
+    }
+    .tabell-tider .dagar {
+        padding-right: 4.7vw;
+    }
+
+    .inforuta{
+        height: 65vw;
+        width:90%;
+        justify-self: center;
+        bottom:-165vw;
+        transform: translateX(5%);
+
+    }
+    .inforuta h4{
+        font-size: 5vw;
+        color: #ed8606;
+        font-weight: bold;
+    }
+    .inforuta p{
+        font-size: 3.5vw;
+        text-align: center;
+        width:90%;
+
+    }
+    .inforuta p br{
+        display: block;
+    }
+
+    .aboutgym {
+
+        height:100vw ;
+        border:none;
+        margin:0;
+        border-radius: 0;
+    }
+    .aboutgym h2{
+        justify-self: center;
+        font-size: 9vw;
+        padding:0;
+        margin-bottom: 0;
+    }
+    main.thegyms .herotext{
+        top:60vw;
+    }
+    main.thegyms #sida2 {
+        height: 135vw;
+        margin-top:180vw;
+    }
+    main.thegyms #sida3 {
+        height:56vw;
+    }
+    .abouttext{
+        grid-template-areas:
+                "a"
+                "b"
+                "c";
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .gymvidplace{
+        width:100%;
+        margin-top: 0;
+        height: 56vw;
+    }
+    .gymvideo {
+        width: 100%;
+        height: auto;
+    }
+    body#bli-medlem{
+        background-color: #1E1E1E;
+    }
+    body#bli-medlem #hero{
+        background-image: url("images/ourGyms2.jpg");
+        background-size: cover;
+        background-position-y: center;
+        height: 45.73vw;
+
+    }
+    body#bli-medlem .herotext{
+
+        top:35vw;
+    }
+    body#bli-medlem .HeaderText {
+        font-size: 8vw ;
+    }
+    body#bli-medlem #sida2{
+
+        height:348vw;
+    }
+    .blackfade{
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(30,30,30,0.4) 10%,rgba(30,30,30,0.9) 50%, rgba(30,30,30,1) 100%);
+    }
+
+    .del1{
+        height: 150vw;
+        border-bottom: 0.01vw dashed rgba(240, 240, 240, 1);
+    }
+    .del1-grid{
+        display: grid;
+        grid-template-areas: "a""b";
+        grid-template-columns: none;
+        grid-template-rows: 1fr 0.2fr;
+        height: 100%;
+    }
+    .sökanläggning{
+        width:80vw;
+        padding:0;
+        justify-self: center;
+        margin-top:10vw;
+    }
+    .sökanläggning h2{
+        font-size: 6vw;
+        font-family: Roboto, sans-serif;
+        font-weight: 600;
+        margin-bottom: 10vw;
+        justify-self: center;
+    }
+    .sökanläggning input{
+        height:10vw;
+        width:77vw;
+        font-family: Roboto, sans-serif;
+        font-size: 3vw;
+        padding:0 0 0 3vw;
+        border-radius: 0.5vw;
+    }
+
+    .sökanläggning input:focus{
+        outline: 0.1vw ridge #ED8606;
+    }
+    .dropdown-list{
+        list-style: none;
+        background-color: rgba(87, 87, 87, 0.4);
+        overflow-y: auto;
+        width: 100%;
+        padding:0;
+        height: 20vw;
+    }
+    .dropdown-list li {
+        padding: 3vw;
+        font-size: 3vw;
+    }
+    .dropdown-list li:hover {
+        background-color: #57575766;
+    }
+    .fortsätt{
+        align-self: center;
+        justify-self: center;
+        padding:0;
+    }
+    .fortsätt .orangeButton{
+        width: 80vw;
+        height: 15vw;
+        font-size: 4vw;
+        cursor: pointer;
+        transition:all 0.3s ease-in-out, color 0.3s ease-in-out;
+
+
+    }
+    .fortsätt .orangeButton:hover{
+        transform: scale(1.05);
+        border: 0.01vw solid #ffffff;
+    }
+    .del2{
+        height: 196vw;
+    }
+    .del2-grid{
+        display: grid;
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+        grid-template-rows: 0.3fr 1fr 0.2fr;
+        height: 100%;
+    }
+    .del2-grid h2{
+        font-size: 6vw;
+        margin:0;
+        align-self: center;
+        padding:0;
+        justify-self: center;
+        grid-area: a;
+
+    }
+    #abonnemang {
+        justify-self: center;
+        width: 80vw;
+        align-items: center;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+
+    }
+
+    .abonnemangcard{
+        height: 75%;
+        width: 72vw;
+        border: 0.1vw ridge #ED8606;
+        margin:0 1.5vw;
+        scroll-snap-align: center; /* Snäppscrollar på varje kort */
+
+    }
+    .abonnemanggrid{
+        display: grid;
+        grid-template-areas:
+            "a"
+            "b"
+            "c";
+        grid-template-rows: 1fr 0.78fr 0.42fr;
+        height: 100%;
+        width: 100%;
+    }
+    .abonnemangtext {
+        justify-content:space-around;
+    }
+
+    .abonnemangtext h5{
+
+        font-weight: 800;
+        font-size: 4vw;
+        padding:0;
+        margin-top: 3vw;
+    }
+    .pris {
+        font-size: 7vw;
+
+    }
+
+    .väljabonnemang {
+
+        width:100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .väljabonnemang button{
+        width: 65%;
+        font-size: 5vw;
+    }
+    .väljabonnemang button:hover{
+        border:none;
+    }
+    .väljabonnemang button:focus{
+        border-color: rgba(255, 255, 255, 1);
+        background-color: #ed8606;
+        color: #293844;
+
+    }
+    .erbjudanden{
+
+        justify-self: center;
+        align-content: center;
+        padding:0;
+    }
+    .erbjudanden li{
+        font-size: 3.2vw;
+        text-align: center;
+    }
+    .kolumn2{
+        align-self: center;
+        border-left: none;
+        border-right:none;
+        border-bottom: 0.6vw solid #293844;
+        border-top: 0.6vw solid #293844;
+        padding: 2.7vw 0;
+        height: 80%;
+    }
+    .kolumn2 p{
+        white-space: pre-line;
+        font-size: 3.2vw;
+        text-align: center;
+    }
+
+    .kolumn3 p{
+        font-size: 3.2vw;
+        text-align: center;
+    }
+
+}
+@media print {
+
+    img {
+        display: none !important;
+    }
+    header, footer.footer{
+        display: none !important;
+    }
+    body{
+        background: none;
+        color: black !important;
+        border-color: black !important;
+
+    }
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+        color:black !important;
+        border-color: black !important;
+        text-decoration-color: black !important;
+    }
+    .orangeButton{
+        border-color: black !important;
+    }
+
+
+}
+
