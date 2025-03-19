@@ -11,9 +11,9 @@ const LoggaInRuta = () => {
     return (
         <>
 
-            <header className={`${show ? "visa" : ""}`}>
+            <header>
 
-                <nav className="navboard">
+                <nav className={ `navboard ${show ? "visa" : ""}`}>
                     <div className="lock">
                         <span className="material-symbols-outlined">lock</span>
 
@@ -36,13 +36,7 @@ const LoggaInRuta = () => {
                             <li><Link to=""> FÖRETAG</Link></li>
                             <li>
                                 <button className="logga-in" id="logga-in" onClick={handleShow}>Logga in</button>
-                                <div id="logga-inRuta" className={`logga-inRuta shadow ${show ? "show" : ""}`}>
-                                    <form>
-                                        <input type="email" name="E-post" id="logga-inEpost" placeholder="E-postadress"/>
-                                        <input type="password" name="password" id="logga-inPass" placeholder="Password"/>
-                                        <input type="submit" value="Logga in" id="logga-inSubmit"/>
-                                    </form>
-                                </div>
+
                             </li>
                             <li>
                                 <button className=" orangeButton" onClick={() => window.location.to = 'bli-medlem.html'}>
@@ -53,7 +47,13 @@ const LoggaInRuta = () => {
                     </div>
 
                 </nav>
-
+                <div id="logga-inRuta" className={`logga-inRuta shadow ${show ? "show" : ""}`}>
+                    <form>
+                        <input type="email" name="E-post" id="logga-inEpost" placeholder="E-postadress"/>
+                        <input type="password" name="password" id="logga-inPass" placeholder="Password"/>
+                        <input type="submit" value="Logga in" id="logga-inSubmit"/>
+                    </form>
+                </div>
 
             </header>
         </>

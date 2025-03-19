@@ -11,7 +11,6 @@ header{
     position: fixed;
     height: 5.46vw;
     width:100%;
-    background: transparent;
     z-index: 1000;
     top:0;
 
@@ -22,15 +21,22 @@ header{
     display: flex;
     justify-content: space-between;
     transition: all 0.3s;
+    background: transparent;
+
 }
-header.visa {
+nav{
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+}
+nav.visa {
     background-color: #171717;
     filter: drop-shadow(0 0 0.41vw #000000);
 }
-header.visa #logo {
+nav.visa #logo {
     filter:none;
 }
-header.visa .orangeButton{
+nav.visa .orangeButton{
     background-color: #ed8606;
 }
 * {
@@ -1240,20 +1246,20 @@ main.thegyms #sida3 {
     width: 100%;
     height: auto;
 }
-body#bli-medlem{
+main#bli-medlem{
     background-color: #1E1E1E;
 }
-body#bli-medlem #hero{
+main#bli-medlem #hero{
     background-image: url("images/ourGyms2.jpg");
     background-size: cover;
     background-position-y: center;
     height: 45.73vw;
 
 }
-body#bli-medlem .herotext{
+main#bli-medlem .herotext{
     top:27vw;
 }
-body#bli-medlem #sida2{
+main#bli-medlem #sida2{
 
     height:100vw;
 }
@@ -1477,15 +1483,15 @@ body#bli-medlem #sida2{
         background-color: #1E1E1E;
 
     }
-    body#home header{
+    main#home header{
         position: fixed;
         background:transparent;
     }
-    body#home header.visa {
+    main#home header.visa {
         background-color: #171717;
         filter: drop-shadow(0 0 0.41vw #000000);
     }
-    body#home header.visa #logo {
+    main#home header.visa #logo {
         filter:none;
     }
     .navboard {
@@ -1606,10 +1612,10 @@ body#bli-medlem #sida2{
 
         filter: brightness(1);
     }
-    body#home #logo{
+    main#home #logo{
         filter:brightness(0.5);
     }
-    body#home #logo.show{
+    main#home #logo.show{
         filter:none;
     }
     #logo img {
@@ -1749,7 +1755,7 @@ body#bli-medlem #sida2{
         width: 100%;
 
     }
-    body#home #hero {
+    main#home #hero {
         height:180vw;
     }
     main#home .herotext {
@@ -2509,24 +2515,24 @@ body#bli-medlem #sida2{
         width: 100%;
         height: auto;
     }
-    body#bli-medlem{
+    main#bli-medlem{
         background-color: #1E1E1E;
     }
-    body#bli-medlem #hero{
+    main#bli-medlem #hero{
         background-image: url("images/ourGyms2.jpg");
         background-size: cover;
         background-position-y: center;
         height: 45.73vw;
 
     }
-    body#bli-medlem .herotext{
+    main#bli-medlem .herotext{
 
         top:35vw;
     }
-    body#bli-medlem .HeaderText {
+    main#bli-medlem .HeaderText {
         font-size: 8vw ;
     }
-    body#bli-medlem #sida2{
+    main#bli-medlem #sida2{
 
         height:348vw;
     }
