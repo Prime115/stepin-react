@@ -2,6 +2,18 @@ import React from "react";
 class Footer extends React.Component {
     render() {
         return (
+            <>
+                <section id="sida4">
+                    <div className="kontaktaOss">
+                        <h4 className="appear">FUNDERINGAR?</h4>
+                        <h1 className="appear"> KONTAKTA OSS</h1>
+                        <button className="orangeButton shadow appear"
+                                onClick={() => window.location.href = '#'}>
+                            <span className="material-symbols-outlined">east</span>
+                        </button>
+                    </div>
+
+                </section>
             <footer className="footer">
                 <img src="/src/images/Icon.png" alt="bild på step in loggan"/>
                 <ul id="list1">
@@ -37,6 +49,7 @@ class Footer extends React.Component {
 
 
             </footer>
+            </>
         );
     }
 }

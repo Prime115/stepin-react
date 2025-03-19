@@ -132,29 +132,10 @@ class Train extends React.Component {
 
                         </div>
                     </div>
-                    <div id="draggable">
-                    </div>
-
-                    <div id="droppable">
-                        <img src="/src/images/empty.png" alt="dumbell"/>
-                        <div id="dropzone"></div>
-
-                    </div>
 
                 </section>
 
-                <section id="sida4">
-                    <div className="kontaktaOss">
-                        <h4 className="appear">FUNDERINGAR?</h4>
-                        <h1 className="appear"> KONTAKTA OSS</h1>
-                        <button className="orangeButton shadow appear"
-                                onClick={() => window.location.href = '#'}>
-                 <span className="material-symbols-outlined">east
-                 </span>
-                        </button>
-                    </div>
 
-                </section>
             </main>
         );
     }

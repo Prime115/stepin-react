@@ -596,16 +596,6 @@ class OurGyms extends React.Component {
 
                 </section>
 
-                <section id="sida4">
-                    <div className="kontaktaOss">
-                        <h4 className="appear">FUNDERINGAR?</h4>
-                        <h1 className="appear"> KONTAKTA OSS</h1>
-                        <button className="orangeButton shadow appear" onClick={() => window.location.href='#'}>
-                 <span className="material-symbols-outlined">east
-                 </span>
-                        </button>
-                    </div>
-                </section>
 
             </main>
         )
